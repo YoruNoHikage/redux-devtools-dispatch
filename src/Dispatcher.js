@@ -38,13 +38,11 @@ export default class Dispatcher extends Component {
   }
 
   launchAction() {
-    this.context.store.dispatch(JSON.parse(this.refs.action.innerText.replace(/\s+/g, ' ')));
+    this.context.store.dispatch(JSON.parse(this.refs.action.textContent.replace(/\s+/g, ' ')));
   }
 
   componentDidMount() {
-    this.refs.action.innerText = this.props.initEmpty ? '\n' : `{
-      "type": ""
-    }`;
+    this.refs.action.innerHTML = this.props.initEmpty ? '<br/>' : '{<br/>"type": ""<br/>}';
   }
 
   render() {
