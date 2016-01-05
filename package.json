@@ -1,7 +1,7 @@
 {
   "name": "redux-devtools-dispatch",
-  "version": "0.1.0",
-  "description": "Dispatch your actions manually to test if your app react well",
+  "version": "0.1.1",
+  "description": "Dispatch your actions manually to test if your app reacts well",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",

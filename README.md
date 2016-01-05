@@ -1,5 +1,9 @@
 # Redux DevTools Dispatch
-Dispatch your actions manually to test if your app react well.
+Dispatch your actions manually to test if your app reacts well.
+
+[![npm version](https://img.shields.io/npm/v/redux-devtools-dispatch.svg?style=flat-square)](https://www.npmjs.com/package/redux-devtools-dispatch)
+
+![redux-devtools-dispatch](https://cloud.githubusercontent.com/assets/969003/12130885/7f805b28-b40e-11e5-93bf-a0e13b2de807.gif)
 
 ### Installation
 
