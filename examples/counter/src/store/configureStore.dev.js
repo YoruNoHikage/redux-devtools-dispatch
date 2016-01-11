@@ -5,10 +5,7 @@ import rootReducer from '../reducers';
 import DevTools from '../containers/DevTools';
 
 const finalCreateStore = compose(
-  applyMiddleware(thunk, () => next => action => {
-    console.log(action);
-    return next(action);
-  }),
+  applyMiddleware(thunk),
   DevTools.instrument(),
   persistState(
     window.location.href.match(
