@@ -50,6 +50,7 @@ Then, just write an JSON action in the field, click on Dispatch, and that's all!
 
 Name                  | Description
 -------------         | -------------
+`theme`               | _Same as in LogMonitor's package_ Either a string referring to one of the themes provided by [redux-devtools-themes](https://github.com/gaearon/redux-devtools-themes) (feel free to contribute!) or a custom object of the same format. Optional. By default, set to [`'nicinabox'`](https://github.com/gaearon/redux-devtools-themes/blob/master/src/nicinabox.js).
 `initEmpty`           | When `true`, the dispatcher is empty. By default, set to `false`, the dispatcher contains : `{ "type": "" }`.
 
 ### Contributing

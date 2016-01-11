@@ -10,7 +10,7 @@ export default createDevTools(
                changePositionKey='ctrl-q'>
     <MultipleMonitors>
       <LogMonitor />
-      <Dispatcher initEmpty="" />
+      <Dispatcher initEmpty />
     </MultipleMonitors>
   </DockMonitor>
 );
