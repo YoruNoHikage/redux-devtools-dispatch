@@ -3,7 +3,7 @@ Dispatch your actions manually to test if your app reacts well.
 
 [![npm version](https://img.shields.io/npm/v/redux-devtools-dispatch.svg?style=flat-square)](https://www.npmjs.com/package/redux-devtools-dispatch)
 
-![redux-devtools-dispatch](https://cloud.githubusercontent.com/assets/969003/12130885/7f805b28-b40e-11e5-93bf-a0e13b2de807.gif)
+![redux-devtools-dispatch](https://cloud.githubusercontent.com/assets/969003/12874321/2c3624ec-cdd2-11e5-9856-fd7e24efb8d5.gif)
 
 ### Installation
 
