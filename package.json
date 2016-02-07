@@ -40,6 +40,7 @@
     "redux-devtools": "^3.0.0"
   },
   "dependencies": {
+    "get-params": "^0.1.2",
     "redux-devtools-themes": "^1.0.0"
   }
 }
