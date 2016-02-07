@@ -128,7 +128,7 @@ export default class Dispatcher extends Component {
   }
 
   resetCustomAction() {
-    this.refs.action.innerHTML = this.props.initEmpty ? '<br/>' : '{<br/>"type": ""<br/>}';
+    this.refs.action.innerHTML = this.props.initEmpty ? '<br/>' : '{<br/>type: ""<br/>}';
   }
 
   getSelectedActionCreator() {
