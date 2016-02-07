@@ -200,7 +200,7 @@ export default class Dispatcher extends Component {
         <div style={{color: theme.base06, background: '#FC2424', padding: '5px', display: 'flex'}}>
           <div style={{flex: '1', alignItems: 'center'}}><p style={{margin: '0px'}}>{this.state.error}</p></div>
           <div style={{alignItems: 'center'}}>
-            <button onClick={() => this.setState({error: null})} style={{...buttonStyle, margin: '0'}}>&times;</button>
+            <button onClick={() => this.setState({error: null})} style={{...buttonStyle, margin: '0', background: '#DC2424'}}>&times;</button>
           </div>
         </div>
       );
