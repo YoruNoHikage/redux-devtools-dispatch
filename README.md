@@ -23,6 +23,32 @@ export default createDevTools(
 );
 ```
 
+You can inject action creators to ease the process of testing your app firing yourself actions.
+
+```js
+import React from 'react';
+import { createDevTools } from 'redux-devtools';
+import Dispatcher from 'redux-devtools-dispatch';
+
+const actionCreators = {
+  increment() {
+    return {type: 'INCREMENT_COUNTER'};
+  },
+  decrement() {
+    return {type: 'DECREMENT_COUNTER'};
+  },
+  nested: {
+    worksToo() {
+      return {type: 'NESTED_WORKS_TOO', cool: true};
+    },
+  },
+};
+
+export default createDevTools(
+  <Dispatcher actionCreators={actionCreators} />
+);
+```
+
 You can also use `<MultipleMonitors>`, a hacky class to use multiple monitors into the `<DockMonitor>`:
 
 ```js
@@ -52,6 +78,7 @@ Name                  | Description
 -------------         | -------------
 `theme`               | _Same as in LogMonitor's package_ Either a string referring to one of the themes provided by [redux-devtools-themes](https://github.com/gaearon/redux-devtools-themes) (feel free to contribute!) or a custom object of the same format. Optional. By default, set to [`'nicinabox'`](https://github.com/gaearon/redux-devtools-themes/blob/master/src/nicinabox.js).
 `initEmpty`           | When `true`, the dispatcher is empty. By default, set to `false`, the dispatcher contains : `{ "type": "" }`.
+`actionCreators`      | Either a array of action creators or an object containing action creators. When defined, a selector appears to choose the action creator you want to fire, you can fill up the arguments and dispatch the action.
 
 ### Contributing
 
