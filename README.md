@@ -13,7 +13,7 @@ Dispatch your actions manually to test if your app reacts well.
 
 You can declare your Dispatcher the same way you declare a Monitor in your Dev Tools.
 
-```js
+```jsx
 import React from 'react';
 import { createDevTools } from 'redux-devtools';
 import Dispatcher from 'redux-devtools-dispatch';
@@ -25,7 +25,7 @@ export default createDevTools(
 
 You can inject action creators to ease the process of testing your app firing yourself actions.
 
-```js
+```jsx
 import React from 'react';
 import { createDevTools } from 'redux-devtools';
 import Dispatcher from 'redux-devtools-dispatch';
@@ -49,16 +49,16 @@ export default createDevTools(
 );
 ```
 
-You can also use `<MultipleMonitors>`, a hacky class to use multiple monitors into the `<DockMonitor>`:
+You can also use `<MultipleMonitors>` from [`redux-devtools-multiple-monitors`](https://github.com/YoruNoHikage/redux-devtools-multiple-monitors) to use multiple monitors into the `<DockMonitor>`:
 
-```js
+```jsx
 import React from 'react';
 
 import { createDevTools } from 'redux-devtools';
 import LogMonitor from 'redux-devtools-log-monitor';
 import DockMonitor from 'redux-devtools-dock-monitor';
 import Dispatcher from 'redux-devtools-dispatch';
-import MultipleMonitors from 'redux-devtools-dispatch/lib/MultipleMonitors';
+import MultipleMonitors from 'redux-devtools-multiple-monitors';
 
 export default createDevTools(
   <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q" defaultIsVisible={false}>
