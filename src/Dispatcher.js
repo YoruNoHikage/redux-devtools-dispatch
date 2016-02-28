@@ -149,7 +149,7 @@ export default class Dispatcher extends Component {
         if(object.hasOwnProperty(propertyName)) {
           if(typeof prop === "function") {
             functions.push({
-              name: namespace + (prop.name || 'anonymous'),
+              name: namespace + (propertyName || prop.name || 'anonymous'),
               func: prop,
               args: getParams(prop),
             });
