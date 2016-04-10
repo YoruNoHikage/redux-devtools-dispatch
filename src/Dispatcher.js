@@ -102,9 +102,16 @@ export default class Dispatcher extends Component {
       let actionCreator = () => ({}), argsToInject = [];
       if(this.state.selectedActionCreator !== 'default') {
         actionCreator = this.getSelectedActionCreator().func;
-        argsToInject = this.state.args.map(
-          (arg) => (new Function('return ' + arg))()
-        );
+
+        const interpretArg = (arg) => (new Function('return ' + arg))()
+        argsToInject = this.state.args.map(interpretArg);
+        const rest = interpretArg(this.refs.restArgs.textContent);
+        if(rest) {
+          if(Array.isArray(rest))
+            argsToInject = argsToInject.concat(...rest);
+          else
+            throw new Error('rest must be an array');
+        }
       } else {
         actionCreator = new Function('return ' + this.refs.action.textContent);
       }
@@ -186,12 +193,19 @@ export default class Dispatcher extends Component {
 
     let fields = <div contentEditable style={contentEditableStyle} ref='action'></div>;
     if(this.state.selectedActionCreator !== 'default') {
+      const fieldStyles = {...styles.label, color: theme.base06};
       fields = this.getSelectedActionCreator().args.map((param, i) => (
         <div key={i} style={{display: 'flex'}}>
-          <span style={{...styles.label, color: theme.base06}}>{param}</span>
-          <div contentEditable style={contentEditableStyle} ref={'arg' + i} onInput={(e) => this.handleArg(e, i)}></div>
+          <span style={fieldStyles}>{param}</span>
+          <div contentEditable style={contentEditableStyle} ref={'arg' + i} onInput={(e) => this.handleArg(e, i)} />
         </div>
       ));
+      fields.push(
+        <div key="action" style={{display: 'flex'}}>
+          <span style={fieldStyles}>rest...</span>
+          <div contentEditable style={contentEditableStyle} ref="restArgs" />
+        </div>
+      );
     }
 
     let error = '';

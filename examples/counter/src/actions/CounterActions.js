@@ -31,3 +31,11 @@ export function incrementAsync() {
     }, 1000);
   };
 }
+
+export function add(...rest) {
+  const compute = rest.concat([0]).reduce((prev, next) => prev + next);
+  const action = compute < 0 ? decrement() : increment();
+  return dispatch => {
+    Array.apply(null, Array(Math.abs(compute))).forEach(() => dispatch(action));
+  };
+}
