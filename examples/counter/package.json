@@ -20,8 +20,8 @@
     "redux-devtools": "^3.0.0",
     "redux-devtools-log-monitor": "^1.0.1",
     "redux-devtools-dock-monitor": "^1.0.1",
-    "redux-devtools-multiple-monitors": "^1.0.0",
-    "redux-devtools-dispatch": "^1.0.0",
+    "redux-devtools-multiple-monitors": "^1.0.1",
+    "redux-devtools-dispatch": "^2.1.0",
     "webpack": "^1.9.11",
     "webpack-dev-server": "^1.9.0"
   }
