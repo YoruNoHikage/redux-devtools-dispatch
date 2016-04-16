@@ -52,6 +52,7 @@ export default class Dispatcher extends Component {
       PropTypes.object,
       PropTypes.array,
     ]),
+    dispatchFn: PropTypes.func,
     theme: PropTypes.oneOfType([
       PropTypes.object,
       PropTypes.string,
@@ -116,7 +117,7 @@ export default class Dispatcher extends Component {
         actionCreator = new Function('return ' + this.refs.action.textContent);
       }
 
-      this.context.store.dispatch(actionCreator(...argsToInject));
+      (this.props.dispatchFn || this.context.store.dispatch)(actionCreator(...argsToInject));
 
       this.setState({error: null});
     } catch(e) {

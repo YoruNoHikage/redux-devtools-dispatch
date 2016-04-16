@@ -79,6 +79,7 @@ Name                  | Description
 `theme`               | _Same as in LogMonitor's package_ Either a string referring to one of the themes provided by [redux-devtools-themes](https://github.com/gaearon/redux-devtools-themes) (feel free to contribute!) or a custom object of the same format. Optional. By default, set to [`'nicinabox'`](https://github.com/gaearon/redux-devtools-themes/blob/master/src/nicinabox.js).
 `initEmpty`           | When `true`, the dispatcher is empty. By default, set to `false`, the dispatcher contains : `{ "type": "" }`.
 `actionCreators`      | Either a array of action creators or an object containing action creators. When defined, a selector appears to choose the action creator you want to fire, you can fill up the arguments and dispatch the action.
+`dispatchFn`          | Function to be called for dispatching actions. By default it is using component's `this.context.store.dispatch`. 
 
 ### Contributing
 
