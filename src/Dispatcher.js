@@ -234,7 +234,7 @@ export default class Dispatcher extends Component {
     const dispatchButton = <button style={dispatchButtonStyle} onClick={this.launchAction.bind(this)}>Dispatch</button>;
 
     return (
-      <div style={{background: theme.base02, fontFamily: 'monaco,Consolas,Lucida Console,monospace'}}>
+      <div style={{background: theme.base02, fontFamily: 'monaco,Consolas,Lucida Console,monospace', position: 'relative'}}>
         {error}
         {fields}
         {actionCreators.length > 0 ? <div style={{display: 'flex'}}>
