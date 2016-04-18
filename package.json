@@ -1,6 +1,6 @@
 {
   "name": "redux-devtools-dispatch",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Dispatch your actions manually to test if your app reacts well",
   "main": "lib/index.js",
   "scripts": {
