@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "get-params": "^0.1.2",
+    "prop-types": "^15.5.10",
     "redux-devtools-themes": "^1.0.0"
   }
 }

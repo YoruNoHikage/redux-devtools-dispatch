@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import getParams from 'get-params';
 import * as themes from 'redux-devtools-themes';
 
