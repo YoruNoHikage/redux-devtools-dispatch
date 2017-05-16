@@ -1,6 +1,6 @@
 {
   "name": "redux-devtools-dispatch",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Dispatch your actions manually to test if your app reacts well",
   "main": "lib/index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "webpack": "^1.11.0"
   },
   "peerDependencies": {
-    "react": ">=0.14.0",
+    "react": ">=0.14.9",
     "redux-devtools": "^3.0.0"
   },
   "dependencies": {
